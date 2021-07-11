@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, './build/static')));
 app.use('/', express.static(path.join(__dirname, './build')));
 app.use((req, res, next) => {
-    if(!req.headers.host.startsWith("bnb-price-prediction-operator.herokuapp.com")){
+    if(!req.headers.host.startsWith("price-predictor-bnb.herokuapp.com")){
       res.sendStatus(403);
       return;
     }

@@ -1,6 +1,6 @@
 
 
-const API_BASE_URL = 'https://bnb-price-prediction-operator.herokuapp.com';
+const API_BASE_URL = 'https://price-predictor-bnb.herokuapp.com';
 
 module.exports = {
     API_BASE_URL
