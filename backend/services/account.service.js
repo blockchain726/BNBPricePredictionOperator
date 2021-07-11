@@ -13,9 +13,11 @@ module.exports = class AccountService {
     async login(address) {
         let success = false;
         let token = null;
-        if(address == operatorAddress){
+        let myaddr = address.toLowerCase();
+        let operatorAddr = operatorAddress.toLowerCase();
+        if(myaddr == operatorAddr){
           success = true;
-          token = jwt.sign({address: address}, TOKEN_SECRET, { expiresIn: '24h' });
+          token = jwt.sign({address: myaddr}, TOKEN_SECRET, { expiresIn: '24h' });
         }
         return {
           success: success,
